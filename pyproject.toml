@@ -1,0 +1,34 @@
+[project]
+name = "library-system"
+version = "0.1.0"
+description = "Simple Python console application to streamline the management of library book loans and inventory."
+readme = "README.md"
+requires-python = ">=3.13.9"
+
+[dependency-groups]
+dev = ["pyright>=1.1.408", "ruff>=0.15.0"]
+
+# Tool configs
+
+[tool.pyright]
+venv = ".venv"
+venvPath = "."
+typeCheckingMode = "standard"
+
+[tool.ruff]
+fix = true
+preview = true
+line-length = 88
+indent-width = 4
+
+[tool.ruff.format]
+docstring-code-format = true
+docstring-code-line-length = 72
+skip-magic-trailing-comma = true
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+split-on-trailing-comma = false
